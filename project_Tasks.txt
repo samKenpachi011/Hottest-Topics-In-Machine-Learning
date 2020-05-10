@@ -1,0 +1,84 @@
+The Hottest Topics in Machine Learning
+Use Natural Language Processing on NIPS papers to uncover the trendiest topics in machine learning research.
+
+Lars Hulstaert
+Data Scientist at Microsoft
+
+Lars is a Data Scientist at Microsoft where he helps enterprise customers with their machine learning projects. He obtained an MPhil. in Machine Learning from the University of Cambridge, a BSc. and MEng. in Computer Science from Ghent University. Lars is passionate about enabling others to achieve more by being data-driven. As he believes that education is key, he writes blogposts on Medium, makes content for Datacamp and mentors students on Springboard after-hours. 
+
+Project Description
+Neural Information Processing Systems (NIPS) is one of the top machine learning conferences in the world where groundbreaking work is published. In this Project, you will analyze a large collection of NIPS research papers from the past decade to discover the latest trends in machine learning. The techniques used here to handle large amounts of data can be applied to other text datasets as well.
+
+Familiarity with Python and pandas is required to complete this Project, as well as experience with Natural Language Processing in Python (sklearn specifically).
+
+Task 2: Instructions
+Clean the data for further analysis.
+
+Remove the id, event_type and pdf_name columns.
+Print the first rows of the DataFrame with the head method.
+
+Task 3: Instructions
+Visualise the number of papers per year.
+
+Group the papers by year.
+Count the number of papers per group (i.e. per year).
+Visualise these counts per year in a bar plot.
+All of the instructions above can be achieved with 3 lines of code and with methods in the pandas library. The following is one of the approaches you can use.
+
+Group the papers by the year variable with a groupby statement and load the result into groups.
+Determine the size of each group of papers by applying the size statement and loading the result into counts.
+Plot the counts as a barplot with the plot statement from the counts variable.
+
+Task 4: Instructions
+Preprocess the text data.
+
+Load the regular expression library (re).
+Convert the titles to lowercase using a map operation.
+Print the processed titles to verify the results.
+The first preprocessing step is already filled in, i.e., removing the punctuation.
+
+If you want to learn more about constructing regular expressions to manipulate strings, check out this course. A more in-depth explanation about regular expressions is provided in the NLP course.
+
+In the interest of time, we will only analyze the titles of the different papers to identify machine learning trends. Note that analyzing the full texts would provide you with more insights.
+
+Task 5: Instructions
+Transform the data and create a word cloud.
+
+Load the wordcloud library.
+Convert all the processed titles to a single string.
+Create a WordCloud object.
+Generate a word cloud.
+Transforming the preprocessed text data to the correct format is required so that it can be handled by the wordcloud library. This library takes a long string as input and outputs a word cloud.
+
+Converting all process titles to a single string can be accomplished with a single line of code using the string join method.
+
+Task 6: Instructions
+Prepare the text for LDA analysis with sk-learn.
+
+Create a CountVectorizer object with the stop_words='english' argument to remove meaningless words.
+Fit and transform the processed titles with the fit_transform method. Save the results in the count_data variable.
+Plot the most common words with the helper function (plot10mostcommonwords).
+Writing the code to transform the titles into document vectors would require a lot of work. Instead, we will use the CountVectorizer method in the sk-learn library.
+
+Once your code is correct, verify whether the same words occur in the plot and in the word cloud.
+
+Task 7: Instructions
+Play around with different values of the LDA algorithm.
+
+Tweak the two parameters of LDA (number of topics and number of words).
+number_topics defines the total number of topics in the LDA model.
+
+number_words is only for debugging purposes. It is the number of words that will be printed for each topic. For each topic, the most important words for the topic are selected.
+
+The details of LDA won't be explored here, but you can find more information in the DataCamp Tutorials page.
+
+A follow-up task would be to build an LDA model for the papers per year and try to determine how the topics in the research field have evolved over time.
+
+Task 8: Instructions
+True or false?
+
+Based on the trend in the number of NIPS submissions, it is likely that the number of submissions for NIPS in 2018 will be higher than the previous year. Answer True or False.
+
+
+
+
